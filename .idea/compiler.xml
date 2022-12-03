@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="author-rest-service" />
+        <module name="fuse-aggregator-spring" />
+        <module name="book-rest-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="author-rest-service" target="1.8" />
+      <module name="book-rest-service" target="1.8" />
+      <module name="fuse-aggregator-spring" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="author-rest-service" options="-parameters" />
+      <module name="book-rest-service" options="" />
+      <module name="fuse-aggregator-spring" options="-parameters" />
+    </option>
+  </component>
+</project>

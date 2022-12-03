@@ -15,7 +15,7 @@ public class RestAggregatorRoute extends RouteBuilder {
 
 	@Override
 	public void configure() throws Exception {
-		from("direct:call-rest-author")
+		/*from("direct:call-rest-author")
 			.routeId("call-rest-services")
 			.to("direct:author-service")
 			.choice()
@@ -24,7 +24,7 @@ public class RestAggregatorRoute extends RouteBuilder {
 					.enrich("direct:books-service", new JsonRestCallsAggregator())
 			.otherwise()
 				.setHeader(Exchange.HTTP_RESPONSE_CODE).constant(APP_RESPONSE_CODE);
-
+*/
 		from("direct:call-rest-all")
 			.routeId("all-service")
 			.removeHeaders("CamelHttp*")
@@ -38,7 +38,7 @@ public class RestAggregatorRoute extends RouteBuilder {
 			.setHeader(Exchange.HTTP_METHOD, constant("GET"))
 		.toD("http://{{authors.url}}/authors/${header.name}");
 
-		from("direct:books-service")
+		/*from("direct:books-service")
 			.routeId("books-service")
 			.onException(HttpOperationFailedException.class)
 				.handled(true)
@@ -46,6 +46,12 @@ public class RestAggregatorRoute extends RouteBuilder {
 			.end()
 			.removeHeaders("CamelHttp*")
 			.setHeader(Exchange.HTTP_METHOD, constant("GET"))
-		.toD("http://{{books.url}}/books/${header.id}");
+		.toD("http://{{books.url}}/books/${header.id}");*/
+
+
+
+
 	}
+
+
 }

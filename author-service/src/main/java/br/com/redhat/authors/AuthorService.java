@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 public class AuthorService {
 
 	public List<Author> all() {
+		System.out.println("Listando todos os autores...");
 		return Arrays.asList(
 			new Author("1", "stephen-king", "Stephen King"),
 			new Author("2", "jk-rowling", "J. K. Rowling"),
