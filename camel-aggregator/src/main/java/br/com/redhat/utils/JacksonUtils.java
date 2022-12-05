@@ -17,4 +17,8 @@ public class JacksonUtils {
         return jsonInString;
     }
 
+    public static ObjectMapper getOM(String json) {
+        return om;
+    }
+
 }
